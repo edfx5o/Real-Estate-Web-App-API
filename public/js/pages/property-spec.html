@@ -1,0 +1,1345 @@
+<div class="saving-overlay hide">
+	<div class="background"></div>
+	<div class="content">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-2 offset-md-5">
+					<div class="image-container">
+						<img src="./img/save.gif"/>
+						<p style="text-align: center;">Saving...</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<button type="button" class="save-property-full icon-alone">
+	<span aria-hidden="true" class="icon-save"></span>
+	<span class="screen-reader-text">Save</span>
+</button>
+
+<button type="button" class="add icon-alone">
+	<span aria-hidden="true" class="icon-add"></span>
+	<span class="screen-reader-text">New</span>
+</button>
+
+<!-- <div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="property-entry print-margin">
+				<div class="row list-wrapper">
+					<div class="col-md-12">
+						<div class="message-wrapper">
+							<div class="message-success">
+								<p class="create hide">Successfully created new user!</p>
+								<p class="update hide">Successfully updated user information!</p>
+							</div>
+							<div class="message-error">
+								<p class="create hide">Error creating new user :(</p>
+								<p class="update hide">Error updating user information :(</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-2">
+					
+						<div class="id-wrapper" hidden>
+							<input type="text" class="fieldID property_id" value="-9999" hidden/>
+							<input type="checkbox" class="fieldCB propertydetails" hidden/>
+							<input type="text" class="fieldID feature_id" value="-9999" hidden/>
+							<input type="text" class="fieldID accommodation_id" value="-9999" hidden/>
+							<input type="text" class="fieldID tax_id" value="-9999" hidden/>
+							<input type="checkbox" class="fieldCB address" hidden/>
+							<input type="text" class="fieldID construct_id" value="-9999" hidden/>
+							<input type="text" class="fieldID owner_id" data-name="owner_id" value="-9999" hidden/>
+						</div>
+						<label>Listing</label>
+						<select class="property ltype_id required" data-name="ltype_id">
+							<option value="default">--</option>
+							<option value="3">Commercial Sale</option>
+							<option value="4">Commercial Rental</option>
+							<option value="5">Residential Sale</option>
+							<option value="6">Residential Rental</option>
+						</select>
+					</div>
+
+					<div class="col-md-2">
+						<label>Status</label>
+						<select class="property status required" data-name="status">
+							<option value="default">--</option>
+							<option value="SOLD">SOLD</option>
+							<option value="RENTED">RENTED</option>
+							<option value="AVAILABLE">AVAILABLE</option>
+							<option value="OFF_MARKET">OFF MARKET</option>
+						</select>
+					</div>
+					<div class='col-md-6'></div>
+					<div class="col-md-2">
+					<div class="list-no-wrapper">
+						<label>Listing No</label>
+						<input type="text" class="property listing_no required" value="" data-name="listing_no"/>
+					</div>
+					</div>
+				</div>
+				
+
+				<div class="row property-wrapper">
+					<div class="col-md-2">
+					<div class="item">
+						<label>Zone</label>
+						<select class="property zone_id required" data-name="zone_id">
+							<option value="default">--</option>
+							<option value="1">NE</option>
+							<option value="2">NW</option>
+							<option value="3">N</option>
+							<option value="4">S</option>
+							<option value="5">E</option>
+							<option value="6">W</option>
+							<option value="7">C</option>
+						</select>
+					</div>
+					</div>
+					<div class="col-md-2">
+					<div class="item">
+						<label>Property Type</label>
+						<select class="property ptype_id required" data-name="ptype_id">
+							<option value="default">--</option>
+							<option value="1">Town House</option>
+							<option value="2">House</option>
+							<option value="3">Land</option>
+							<option value="4">Estate</option>
+							<option value="5">Building</option>
+							<option value="6">Office</option>
+							<option value="7">Apartment</option>
+							<option value="8">Warehouse</option>
+						</select>
+					</div>
+					</div>
+					<div class="col-md-2">
+						<label>Commission %</label>
+						<input type="number" class="property commission" value="" data-name="commission"/>
+						<input type="number" class="property fees" value="-9999" data-name="fees" disabled="" hidden/>
+					</div>
+
+					<div class="col-md-2">
+					<div class="item">
+						<label>List Price</label>
+						<input type="number" class="property list_price" value="" data-name="list_price"/>
+						<input type="number" class="property market_price" value="-9999" data-name="market_price" disabled="" hidden />
+					</div>
+					</div>
+
+					<div class="col-md-2">
+					<div class="item">
+						<label>Land Size</label>
+						<input type="text" class="property land_size" value="" data-name="land_size"/>
+					</div>
+					</div>
+					<div class="col-md-2">
+					<div class="item">
+						<label>Building Size</label>
+						<input type="text" class="property building_size" value="" data-name="building_size"/>
+					</div>
+					</div>
+
+					<div class="col-md-12">
+					<div class="item">
+						<label>Address</label>
+						<input type="text" class="property address_line1" value="" data-name="address_line1"/>
+						<input type="text" class="property geolocation" value="--" data-name="geolocation" disabled="" hidden/>
+					</div>
+					</div>
+					<div class="col-md-12">
+					<div class="item">
+						<input type="text" class="property address_line2" value="" data-name="address_line2"/>
+					</div>
+					</div>
+					<div class="col-md-12">
+					<div class="item">
+						<input type="text" class="property address_line3" value="" data-name="address_line3"/>
+					</div>
+					</div>
+
+					<div class="col-md-12">
+					<div class="item">
+						<label>Directions</label>
+						<textarea class="property directions" data-name="directions"></textarea>
+					</div>
+					</div>
+					
+					<div class="col-md-9">
+					<div class="item">
+						<label>Description</label>
+						<textarea class="property description" data-name="description"></textarea>
+					</div>
+					</div>
+
+					<div class="col-md-3">
+					<div class="item">
+						<label>Viewing Info</label>
+						<textarea class="property viewing_info" data-name="viewing_info"></textarea>
+					</div>
+					</div>
+
+					<div class="col-md-12">
+					<div class="item">
+						<label>Notes</label>
+						<input type="text" class="property mortgage_info" data-name="mortgage_info" />
+						<input type="text" class="property notes" data-name="notes" disabled="" hidden />
+					</div>
+					</div>
+
+					<div class="col-md-3">
+					<div class="item">
+						<label>Furnishings</label>
+						<input type="text" class="property furnishings" value="" data-name="furnishings"/>
+					</div>
+					</div>
+
+					<div class="col-md-3">
+					<div class="item">
+						<label>Service Charge</label>
+						<input type="text" class="property service_charge" value="" data-name="service_charge"/>
+					</div>
+					</div>
+
+					<div class="col-md-6">
+					<div class="item">
+						<label>Deed No</label>
+						<input type="text" class="property deed_no" value="" data-name="deed_no"/>
+					</div>
+					</div>
+
+					<div class="col-md-9"></div>
+
+					<div class="col-md-12">
+						<h4 style="margin: 10px 0 20px; border-bottom: 1px solid #e2e2e2; padding-bottom: 20px;">Construction</h4>
+					</div>
+
+					<div class="col-md-2">
+					<div class="item">
+						<label>Age</label>
+						<input type="text" class="property age" value="" data-name="age"/>
+					</div>
+					</div>
+
+					<div class="col-md-2">
+					<div class="item">
+						<label>Ceiling</label>
+						<input type="text" class="property ceiling" value="" data-name="ceiling"/>
+					</div>
+					</div>
+
+					<div class="col-md-2">
+					<div class="item">
+						<label>Walls</label>
+						<input type="text" class="property walls" value="" data-name="walls"/>
+					</div>
+					</div>
+
+					<div class="col-md-2">
+					<div class="item">
+						<label>Floors</label>
+						<input type="text" class="property floors" value="" data-name="floors"/>
+					</div>
+					</div>
+
+					<div class="col-md-2">
+					<div class="item">
+						<label>Structure</label>
+						<input type="text" class="property structure" value="" data-name="structure"/>
+					</div>
+					</div>
+
+					<div class="col-md-2">
+					<div class="item">
+						<label>Roof</label>
+						<input type="text" class="property roof" value="" data-name="roof"/>
+					</div>
+					</div>
+
+					<div class="col-md-12">
+						<h4 style="margin: 10px 0 20px; border-bottom: 1px solid #e2e2e2; padding-bottom: 20px;">Levels</h4>
+					</div>
+
+					<div class="col-md-2">
+					<div class="item">
+						<label>Level</label>
+						<input type="text" class="levels row1 level_id" value="-9999" hidden/>
+						<input type="text" class="levels row2 level_id" value="-9999" hidden/>
+						<input type="text" class="levels row3 level_id" value="-9999" hidden/>
+						<input type="text" class="levels row4 level_id" value="-9999" hidden/>
+						<input type="text" class="levels row5 level_id" value="-9999" hidden/>
+						<input type="text" class="levels row1 level" value="" data-name="level"/>
+						<input type="text" class="levels row2 hide level" value="" data-name="level"/>
+						<input type="text" class="levels row3 hide level" value="" data-name="level"/>
+						<input type="text" class="levels row4 hide level" value="" data-name="level"/>
+						<input type="text" class="levels row5 hide level" value="" data-name="level"/>
+					</div>
+					</div>
+
+					<div class="col-md-2">
+					<div class="item">
+						<label>Net Internal</label>
+						<input type="text" class="levels row1 net_internal" value="" data-name="net_internal"/>
+						<input type="text" class="levels row2 hide net_internal" value="" data-name="net_internal"/>
+						<input type="text" class="levels row3 hide net_internal" value="" data-name="net_internal"/>
+						<input type="text" class="levels row4 hide net_internal" value="" data-name="net_internal"/>
+						<input type="text" class="levels row5 hide net_internal" value="" data-name="net_internal"/>
+					</div>
+					</div>
+
+					<div class="col-md-2">
+					<div class="item">
+						<label>Common</label>
+						<input type="text" class="levels row1 common" value="" data-name="common"/>
+						<input type="text" class="levels row2 hide common" value="" data-name="common"/>
+						<input type="text" class="levels row3 hide common" value="" data-name="common"/>
+						<input type="text" class="levels row4 hide common" value="" data-name="common"/>
+						<input type="text" class="levels row5 hide common" value="" data-name="common"/>
+					</div>
+					</div>
+
+					<div class="col-md-2">
+					<div class="item">
+						<label>Rentable</label>
+						<input type="text" class="levels row1 rentable" value="" data-name="rentable"/>
+						<input type="text" class="levels row2 hide rentable" value="" data-name="rentable"/>
+						<input type="text" class="levels row3 hide rentable" value="" data-name="rentable"/>
+						<input type="text" class="levels row4 hide rentable" value="" data-name="rentable"/>
+						<input type="text" class="levels row5 hide rentable" value="" data-name="rentable"/>
+					</div>
+					</div>
+
+					<div class="col-md-2">
+					<div class="item">
+						<label>Gross</label>
+						<input type="text" class="levels row1 gross" value="" data-name="gross"/>
+						<input type="text" class="levels row2 hide gross" value="" data-name="gross"/>
+						<input type="text" class="levels row3 hide gross" value="" data-name="gross"/>
+						<input type="text" class="levels row4 hide gross" value="" data-name="gross"/>
+						<input type="text" class="levels row5 hide gross" value="" data-name="gross"/>
+					</div>
+					</div>
+
+					<div class="col-md-2">
+					<div class="item">
+						<label>Rent P.S.F</label>
+						<input type="text" class="levels row1 rent_psf" value="" data-name="rent_psf"/>
+						<input type="text" class="levels row2 hide rent_psf" value="" data-name="rent_psf"/>
+						<input type="text" class="levels row3 hide rent_psf" value="" data-name="rent_psf"/>
+						<input type="text" class="levels row4 hide rent_psf" value="" data-name="rent_psf"/>
+						<input type="text" class="levels row5 hide rent_psf" value="" data-name="rent_psf"/>
+					</div>
+					</div>
+
+					<div class="col-md-12">
+						<button class="btn btn-primary add-level" type="button" data-level="1">Add</button>
+
+						<script>
+							$(document).on('click', '.add-level', function () {
+								var lvl = parseInt($(this).attr('data-level')) + 1;
+
+								if (lvl <= 5) {
+									$('.row' + lvl).removeClass('hide');
+									$(this).attr({'data-level': lvl});
+								}
+								
+							});
+						</script>
+					</div>
+
+					<div class="col-md-12">
+						<h4 style="margin: 10px 0 20px; border-bottom: 1px solid #e2e2e2; padding-bottom: 20px;">Accommodations</h4>
+					</div>
+
+					<div class="col-md-4 side-by-side">
+					<div class="item">
+						<label>Bedrooms
+						<input type="text" class="property bedrooms" value="" data-name="bedrooms"/></label>
+						<label>Baths
+						<input type="text" class="property baths" value="" data-name="baths"/></label>
+						<label>Kitchen
+						<input type="text" class="property kitchen" value="" data-name="kitchen"/></label>
+						<label>Living
+						<input type="text" class="property living" value="" data-name="living"/></label>
+						<label>Dining
+						<input type="text" class="property dining" value="" data-name="dining"/></label>
+					</div>
+					</div>
+
+					<div class="col-md-4 side-by-side">
+					<div class="item">
+						<label>Family
+						<input type="text" class="property family" value="" data-name="family"/></label>
+						<label>Study
+						<input type="text" class="property study" value="" data-name="study"/></label>
+						<label>TV Room
+						<input type="text" class="property tvroom" value="" data-name="tvroom"/></label>
+						<label>Powder
+						<input type="text" class="property powder" value="" data-name="powder"/></label>
+						<label>Laundry
+						<input type="text" class="property laundry" value="" data-name="laundry"/></label>
+					</div>
+					</div>
+
+					<div class="col-md-4 side-by-side">
+					<div class="item">
+						<label>Maid
+						<input type="text" class="property maid" value="" data-name="maid"/></label>
+						<label>Storage
+						<input type="text" class="property storage_room" value="" data-name="storage_room"/></label>
+						<label>Porch
+						<input type="text" class="property porch" value="" data-name="porch"/></label>
+						<label>Parking
+						<input type="text" class="property parking" value="" data-name="parking"/></label>
+						<label>Other
+						<input type="text" class="property other" value="" data-name="other"/></label>
+					</div>
+					</div>
+					
+					<span class="print-margin"></span>
+					<div class="col-md-12">
+						<h4 class="" style="margin: 10px 0 20px; border-bottom: 1px solid #e2e2e2; padding-bottom: 20px;">Miscellaneous</h4>
+					</div>
+
+					<div class="col-md-4 side-by-side">
+					<div class="item">
+						<label>AC
+						<input type="text" class="property ac" value="" data-name="ac"/></label>
+						<label>Security
+						<input type="text" class="property security" value="" data-name="security"/></label>
+						<label>Pool
+						<input type="text" class="property pool" value="" data-name="pool"/></label>
+					</div>
+					</div>
+
+					<div class="col-md-4 side-by-side">
+					<div class="item">
+						<label>W/Tank
+						<input type="text" class="property w_tanks" value="" data-name="w_tanks"/></label>
+						<label>W/Heater
+						<input type="text" class="property w_heater" value="" data-name="w_heater"/></label>
+						<label>Generator
+						<input type="text" class="property generator" value="" data-name="generator"/></label>
+					</div>
+					</div>
+
+					<div class="col-md-4 side-by-side">
+					<div class="item">
+						<label>Elevator
+						<input type="text" class="property elevator" value="" data-name="elevator"/></label>
+						<label>Partition
+						<input type="text" class="property partition" value="" data-name="partition"/></label>
+						<label>Fence
+						<input type="text" class="property fence" value="" data-name="fence"/></label>
+					</div>
+					</div>
+
+					<div class="col-md-12">
+					<div class="item">
+						<label>Miscellaneous Information</label>
+						<input type="text" class="property misc_info" data-name="misc_info"/>
+					</div>
+					</div>
+
+					<div class="col-md-12">
+						<h4 style="margin: 10px 0 20px; border-bottom: 1px solid #e2e2e2; padding-bottom: 20px;">Site Details</h4>
+					</div>
+
+					<div class="col-md-3">
+					<div class="item">
+						<label>Tenure</label>
+						<input type="text" class="property tenure" value="" data-name="tenure"/>
+					</div>
+					</div>
+
+					<div class="col-md-2">
+					<div class="item">
+						<label>Years</label>
+						<input type="text" class="property years" value="" data-name="years"/>
+					</div>
+					</div>
+
+					<div class="col-md-2">
+					<div class="item">
+						<label>Ren. Opt.</label>
+						<input type="text" class="property ren_opt" value="" data-name="ren_opt"/>
+					</div>
+					</div>
+
+					<div class="col-md-2">
+					<div class="item">
+						<label>Rent</label>
+						<input type="text" class="property rent" value="" data-name="rent"/>
+					</div>
+					</div>
+
+					<div class="col-md-3">
+					<div class="item">
+						<label>Topo</label>
+						<input type="text" class="property topo" value="" data-name="topo"/>
+					</div>
+					</div>
+
+					<div class="col-md-12">
+						<h4 style="margin: 10px 0 20px; border-bottom: 1px solid #e2e2e2; padding-bottom: 20px;">Taxes</h4>
+					</div>	
+
+					<div class="col-md-3">
+					<div class="item">
+						<label>Taxes</label>
+						<input type="text" class="property taxes" value="" data-name="taxes"/>
+					</div>
+					</div>
+
+					<div class="col-md-2">
+					<div class="item">
+						<label>WASA</label>
+						<input type="text" class="property wasa" value="" data-name="wasa"/>
+					</div>
+					</div>
+
+					<div class="col-md-2">
+					<div class="item">
+						<label>Maintenance</label>
+						<input type="text" class="property maintenance" value="" data-name="maintenance"/>
+					</div>
+					</div>
+
+					<div class="col-md-2">
+					<div class="item">
+						<label>Insurance</label>
+						<input type="text" class="property insurance" value="" data-name="insurance"/>
+					</div>
+					</div>
+
+					<div class="col-md-3">
+					<div class="item">
+						<label>Comp. Cert</label>
+						<input type="text" class="property comp_cert" value="" data-name="comp_cert"/>
+					</div>
+					</div>
+				</div>
+		
+				<div class="row property-wrapper owner-wrapper">
+
+					<div class="col-md-12">
+						<h4 style="margin: 10px 0 20px; border-bottom: 1px solid #e2e2e2; padding-bottom: 20px;">Owner</h4>
+					</div>	
+
+					<div class="col-md-12">
+						<div class="item">
+							<label>
+								Existing Owners
+								<a href="#" class="update-owner hide" style="float: right; text-decoration: none;">Update Owner Details</a>
+							</label>
+							<select class="property select-owner owner_id" data-name="owner_id">
+								<option value="default">--</option>
+							</select>
+							<script>
+								$.get('/owners').done(function (data) {
+									$.each(data, function (i, field) {
+										var option = $('<option>', {'value': field.id, 'text': field.name });
+										$('.select-owner').append(option);
+									});
+								});
+
+								$(document).on('change', '.select-owner', function () {
+									$.get('/owners/' + $(this).val()).done(function (data) {
+										$.each($('.owner'), function (i, field) {
+											var attr = $(field).attr('data-attr-name');
+											$(field).val(data[attr]);
+										});
+									});
+
+									if ($(this).val() !== 'default') {
+										$('input.owner_id').val($(this).val());
+										$('.owner').prop('disabled', true);
+										$('.update-owner').removeClass('hide');
+									} else {
+										$('input.owner_id').val('-9999');
+										$('.owner').prop('disabled', false);
+										$('.update-owner').addClass('hide');
+									}
+									
+								});
+
+								$(document).on('click', '.update-owner', function (e) {
+									e.preventDefault();
+									$('.owner').prop('disabled', false);
+								});
+							</script>
+						</div>
+					</div>
+
+					<div class="col-md-12">
+					<div class="item">
+						<label>Name</label>
+						<input type="text" class="owner owner_name" data-attr-name="name" value="" />
+					</div>
+					</div>
+
+					<div class="col-md-12">
+					<div class="item">
+						<label>Address</label>
+						<input type="text" class="owner owner_address" data-attr-name="address" value="" />
+					</div>
+					</div>
+
+					<div class="col-md-12">
+					<div class="item">
+						<label>Organisation</label>
+						<input type="text" class="owner organisation" data-attr-name="organisation" value="" />
+					</div>
+					</div>
+
+					<div class="col-md-3">
+					<div class="item">
+						<label>Email</label>
+						<input type="text" class="owner owner_email" data-attr-name="email" value="" />
+					</div>
+					</div>
+
+					<div class="col-md-3">
+					<div class="item">
+						<label>Work Phone</label>
+						<input type="text" class="owner owner_phone1" data-attr-name="primary_phone" value="" />
+					</div>
+					</div>	
+
+					<div class="col-md-3">
+					<div class="item">
+						<label>Home Phone</label>
+						<input type="text" class="owner owner_phone2" data-attr-name="secondary_phone" value="" />
+					</div>
+					</div>	
+
+					<div class="col-md-3">
+					<div class="item">
+						<label>Fax</label>
+						<input type="text" class="owner fax" data-attr-name="fax" value="" />
+					</div>
+					</div>
+
+					<div class="col-md-12">
+					<div class="item">
+						<label>Contact</label>
+						<input type="text" class="owner contact" data-attr-name="contact" value="" />
+					</div>
+					</div>
+
+					<div class="col-md-4">
+					<div class="item">
+						<label>Contact Phone</label>
+						<input type="text" class="owner contact_phone" data-attr-name="contact_phone" value="" />
+					</div>
+					</div>
+
+					<div class="col-md-4">
+					<div class="item">
+						<label>Contact Email</label>
+						<input type="text" class="owner contact_email" data-attr-name="contact_email" value="" />
+					</div>
+					</div>
+
+					<div class="col-md-4">
+					<div class="item">
+						<label>Contact Fax</label>
+						<input type="text" class="owner contact_fax" data-attr-name="contact_fax" value="" />
+					</div>
+					</div>
+
+					<div class="col-md-12">
+					<div class="item">
+						<label>Note</label>
+						<textarea class="owner note" data-attr-name="note"></textarea>
+					</div>
+					</div>
+				</div>
+
+				<div class="row property-wrapper">
+					<div class="col-md-12">
+						<h4 style="margin: 10px 0 20px; border-bottom: 1px solid #e2e2e2; padding-bottom: 20px;">Broker</h4>
+					</div>
+
+					<div class="col-md-4">
+					<div class="item">
+						<label>Name</label>
+						<select class="property broker_id" data-name="broker_id">
+						</select>
+
+						<script>
+							var broker = localStorage.getItem('b');
+							console.log('>>>>>>>>>>>>> BROKER', broker);
+
+							if (broker == 0) {
+								$.get('/brokerage').done(function (data) {
+									$.each(data, function (i, field) {
+										var option = $('<option>', {'value': field.id, 'text': field.name});
+										$('.broker_id').append(option);
+									});
+								});
+							} else {
+								$.get('/brokerage/' + broker).done(function (data) {
+									var option = $('<option>', {'value': data.id, 'text': data.name});
+									$('.broker_id').append(option);
+									$('.broker_id').val(data.id);
+									$('.broker_id').prop('disabled', true);
+								});
+							}
+						</script>
+					</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="item">
+							<label>Agent</label>
+							<input type="checkbox" class="property is_agent" checked="checked" data-name="is_agent" disabled hidden>
+							<select class="property agent_id" data-name="agent_id">
+								<option value="default">--</option>
+							</select>
+							<script>
+								$.get('/user/agents').done(function (data) {
+									$.each(data, function (i, field) {
+										var option = $('<option>', {'value': field.id, 'text': field.first_name + ' ' + field.last_name});
+										$('.agent_id').append(option);
+									});
+								});
+							</script>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+					<div class="item">
+						<label>Phone</label>
+						<input type="text" class="broker_phone" data-attr-name="primary_phone" value="+18682890070" />
+					</div>
+					</div>
+					
+				</div>
+			</div>
+			<span class="spacer"></span>
+		</div>
+	</div>
+</div> -->
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<h2 style="text-transform: uppercase; margin-bottom: 20px; display: inline-block; font-size: 16pt; color: #5a5a5a;">Add New Listing</h2>
+
+			<a data-target="#photo-upload-modal" 
+			   data-toggle="modal" 
+			   href="#photo-upload-modal" 
+			   style="font-size: 18px; text-decoration: none; display: inline-block; float: right; color: #10d2c9;"
+			   tooltip="Seen by everyone">
+				<span class="icon-alone">
+					<span aria-hidden="true" class="icon-toggle-right"></span>
+				</span> 
+			</a>
+			<span class="property-visibility" style="display: inline-block; font-size: 12pt; float: right; margin-right: 10px; text-transform: uppercase;">
+			public</span>
+		</div>
+	</div>
+
+	<div class="row">
+		<aside class="col-md-5">
+			<section class="image-upload-wrapper">
+				<div class="image-container">
+					<a href="#" class="gallery false" style="display: block;">
+						<img src="../img/placeholder.jpg" title="Property Image Placeholder" />
+					</a>
+				</div>
+
+				<a data-target="#photo-upload-modal" 
+				   data-toggle="modal" 
+				   href="#photo-upload-modal" 
+				   style="font-size: 12pt; text-decoration: none; margin: 20px 0; display: inline-block; outline: none;">
+					<span class="icon-alone">
+						<span aria-hidden="true" class="icon-upload"></span>
+					</span> <span>upload photos</span>
+				</a>
+			</section>
+
+			<section class="property-essentials-wrapper">
+				<p class="input-grp" style="margin-bottom: 8px;">
+					<label for="listing_no" style="margin-bottom: 4px; font-size: 12px; text-transform: uppercase; line-height: 28px;">Listing No</label>
+					<input type="text" class="property listing_no required" placeholder="" data-name="listing_no" 
+						   style="width: 70%; text-indent: 10px; float: right; height: 29.5px;">
+				</p>
+
+				<p class="input-grp" style="margin-bottom: 8px;">
+					<label for="ltype_id" style="margin-bottom: 4px; font-size: 12px; text-transform: uppercase; line-height: 28px;">Listing Type</label>
+					<select class="property ltype_id required" data-name="ltype_id" style="width: 70%; text-indent: 10px; float: right; height: 29.5px;">
+						<option value="default">--</option>
+						<option value="3">Commercial Sale</option>
+						<option value="4">Commercial Rental</option>
+						<option value="5">Residential Sale</option>
+						<option value="6">Residential Rental</option>
+					</select>
+				</p>
+
+				<p class="input-grp" style="margin-bottom: 8px;">
+					<label for="status" style="margin-bottom: 4px; font-size: 12px; text-transform: uppercase; line-height: 28px;">Status</label>
+					<select class="property status required" data-name="status" style="width: 70%; text-indent: 10px; float: right; height: 29.5px;">
+						<option value="default">--</option>
+						<option value="SOLD">SOLD</option>
+						<option value="RENTED">RENTED</option>
+						<option value="AVAILABLE">AVAILABLE</option>
+						<option value="OFF_MARKET">OFF MARKET</option>
+					</select>
+				</p>
+
+				<p class="input-grp" style="margin-bottom: 8px;">
+					<label for="ptype_id" style="margin-bottom: 4px; font-size: 12px; text-transform: uppercase; line-height: 28px;">Property Type</label>
+					<select class="property ptype_id required" data-name="ptype_id" style="width: 70%; text-indent: 10px; float: right; height: 29.5px;">
+						<option value="default">--</option>
+						<option value="1">Town House</option>
+						<option value="2">House</option>
+						<option value="3">Land</option>
+						<option value="4">Estate</option>
+						<option value="5">Building</option>
+						<option value="6">Office</option>
+						<option value="7">Apartment</option>
+						<option value="8">Warehouse</option>
+					</select>
+				</p>
+
+				<p class="input-grp" style="margin-bottom: 8px;">
+					<label for="zone_id" style="margin-bottom: 4px; font-size: 12px; text-transform: uppercase; line-height: 28px;">Zone</label>
+					<select class="property zone_id required" data-name="zone_id" style="width: 70%; text-indent: 10px; float: right; height: 29.5px;">
+						<option value="default">--</option>
+						<option value="1">NE</option>
+						<option value="2">NW</option>
+						<option value="3">N</option>
+						<option value="4">S</option>
+						<option value="5">E</option>
+						<option value="6">W</option>
+						<option value="7">C</option>
+					</select>
+				</p>
+
+				<p class="input-grp" style="margin-bottom: 8px;">
+					<label for="list_price" style="margin-bottom: 4px; font-size: 12px; text-transform: uppercase; line-height: 28px;">List Price</label>
+					<input type="number" class="property list_price" placeholder="" data-name="list_price" 
+						   style="width: 70%; text-indent: 10px; float: right; height: 29.5px;">
+				</p>
+
+				<p class="input-grp" style="margin-bottom: 8px;">
+					<label for="commission" style="margin-bottom: 4px; font-size: 12px; text-transform: uppercase; line-height: 28px;">Commission %</label>
+					<select class="property commission" data-name="commission" style="width: 70%; text-indent: 10px; float: right; height: 29.5px;">
+						<option value="default">--</option>
+						<option value="3.00">3.00</option>
+						<option value="100.00">100.00</option>
+					</select>
+				</p>
+
+				<p class="input-grp" style="margin-bottom: 8px;">
+					<label for="land_size" style="margin-bottom: 4px; font-size: 12px; text-transform: uppercase; line-height: 28px;">Land Size</label>
+					<input type="text" class="property land_size" placeholder="" data-name="land_size" 
+						   style="width: 70%; text-indent: 10px; float: right; height: 29.5px;">
+				</p>
+
+				<p class="input-grp" style="margin-bottom: 8px;">
+					<label for="building_size" style="margin-bottom: 4px; font-size: 12px; text-transform: uppercase; line-height: 28px;">Building Size</label>
+					<input type="text" class="property building_size" placeholder="" data-name="building_size" 
+						   style="width: 70%; text-indent: 10px; float: right; height: 29.5px;">
+				</p>
+
+				<p class="input-grp" style="margin-bottom: 8px;">
+					<label for="deed_no" style="margin-bottom: 4px; font-size: 12px; text-transform: uppercase; line-height: 28px;">Deed No</label>
+					<input type="text" class="property deed_no" placeholder="" data-name="deed_no" 
+						   style="width: 70%; text-indent: 10px; float: right; height: 29.5px;">
+				</p>
+			</section>
+		</aside>
+
+		<main class="col-md-7" role="main">
+			<div class="address-wrapper" 
+				style="padding: 10px; margin-bottom: 10px; background: #fff; overflow: hidden; transition: height 0.3s ease-in-out; height: 568px; border: 1px solid #a9a9a9;">
+				<a href="#" class="controller ctrl-address" 
+					style="text-transform: uppercase; text-decoration: none; display: block; font-size: 12pt; color: #5a5a5a; padding-bottom: 10px;">
+					<span class="icon-alone" style="float: right; font-size: 24px;">
+						<span aria-hidden="true" class="icon-chevron-up"></span>
+					</span> 
+					<span class="title">Property Address & Viewing Information</span>
+				</a>
+				<div class="row">
+					<div class="col-md-12">
+						<p class="input-grp" style="margin-bottom: 8px;">
+							<select class="country_id" data-name="country_id" style="width: 100%; text-indent: 10px; height: 29.5px;">
+								<option value="default">Country</option>
+							</select>
+						</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-6">
+						<p class="input-grp" style="margin-bottom: 8px;">
+							<input type="text" class="property address_line1" placeholder="Address Line 1" data-name="address_line1" 
+									   style="width: 100%; text-indent: 10px; height: 29.5px;">
+						</p>
+					</div>
+					<div class="col-md-6">
+						<p class="input-grp" style="margin-bottom: 8px;">
+							<input type="text" class="property address_line2" placeholder="Address Line 2" data-name="address_line2" 
+									   style="width: 100%; text-indent: 10px; height: 29.5px;">
+						</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-6">
+						<p class="input-grp" style="margin-bottom: 8px;">
+							<select class="property city_id" data-name="city_id" style="width: 100%; text-indent: 10px; height: 29.5px;">
+								<option value="default">City/Town</option>
+							</select>
+						</p>
+					</div>
+					<div class="col-md-6">
+						<p class="input-grp" style="margin-bottom: 8px;">
+							<input type="text" class="property zip" placeholder="ZIP / Postal Code" data-name="zip" 
+									   style="width: 100%; text-indent: 10px; height: 29.5px;">
+						</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<p class="input-grp" style="margin-bottom: 8px;">
+							<label for="directions" style="margin-bottom: 4px; font-size: 12px; text-transform: uppercase; line-height: 28px;">Directions</label>
+							<textarea class="property directions" data-name="directions" placeholder="Directions" 
+								style="width: 100%; text-indent: 10px; height: 80px;"></textarea>
+						</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<p class="input-grp" style="margin-bottom: 8px;">
+							<label for="description" style="margin-bottom: 4px; font-size: 12px; text-transform: uppercase; line-height: 28px;">Description</label>
+							<textarea class="property description" data-name="description" placeholder="Description" 
+								style="width: 100%; text-indent: 10px; height: 80px;"></textarea>
+						</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<p class="input-grp" style="margin-bottom: 8px;">
+							<input type="text" class="property viewing_info" placeholder="Viewing Information" data-name="viewing_info" 
+									   style="width: 100%; text-indent: 10px; height: 29.5px;">
+						</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<p class="input-grp" style="margin-bottom: 8px;">
+							<label for="notes" style="margin-bottom: 4px; font-size: 12px; text-transform: uppercase; line-height: 28px;">Notes</label>
+							<textarea class="property notes" data-name="notes" placeholder="Notes" 
+								style="width: 100%; text-indent: 10px; height: 80px;"></textarea>
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="accommodations-wrapper" 
+				style="padding: 10px; margin-bottom: 10px; background: #fff; overflow: hidden; transition: height 0.3s ease-in-out; height: 86px; border: 1px solid #a9a9a9;">
+				<a href="#" class="controller ctrl-accommodations" 
+					style="text-transform: uppercase; text-decoration: none; display: block; font-size: 12pt; color: #5a5a5a; padding-bottom: 10px;">
+					<span class="icon-alone" style="float: right; font-size: 24px;">
+						<span aria-hidden="true" class="icon-chevron-up"></span>
+					</span> 
+					<span class="title">Accommodations</span>
+				</a>
+
+				<div class="row">
+					<div class="col-md-5">
+						<p class="input-grp" style="margin-bottom: 8px;">
+							<select class="accommodations-selector" style="width: 100%; text-indent: 10px; float: right; height: 29.5px;">
+								<option value="default">Accommodations</option>
+								<option value="bedrooms">Bedrooms</option>
+								<option value="baths">Baths</option>
+								<option value="kitchen">Kitchen</option>
+								<option value="living">Living</option>
+								<option value="dining">Dining</option>
+								<option value="family">Family</option>
+								<option value="studyt">Study</option>
+								<option value="tvroom">TV Room</option>
+								<option value="powder">Powder</option>
+								<option value="laundry">Laundry</option>
+								<option value="main">Maid</option>
+								<option value="storage_room">Storage Room</option>
+								<option value="porch">Porch</option>
+								<option value="parking">Parking</option>
+								<option value="other">Other</option>
+							</select>
+						</p>
+					</div>
+					<div class="col-md-5">
+						<p class="input-grp" style="margin-bottom: 8px;">
+							<input type="text" class="property" data-name="" style="width: 100%; text-indent: 10px; height: 29.5px;" disabled="">
+						</p>
+					</div>
+
+					<div class="col-md-2">
+						<p class="input-grp" style="margin-bottom: 8px;">
+							<button type="button" class="accommodation-plus icon-alone" 
+								style="width: 100%; height: 29.5px; border: none; background: #55acf9; color: #FFFFFF; cursor: not-allowed;" disabled="">
+								<span aria-hidden="true" class="icon-plus"></span>
+								<span class="screen-reader-text">Add Accommodations</span>
+							</button>
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="construction-wrapper" 
+				style="padding: 10px; margin-bottom: 10px; background: #fff; overflow: hidden; transition: height 0.3s ease-in-out; height: 86px; border: 1px solid #a9a9a9;">
+				<a href="#" class="controller ctrl-construction" 
+					style="text-transform: uppercase; text-decoration: none; display: block; font-size: 12pt; color: #5a5a5a; padding-bottom: 10px;">
+					<span class="icon-alone" style="float: right; font-size: 24px;">
+						<span aria-hidden="true" class="icon-chevron-up"></span>
+					</span> 
+					<span class="title">Construction</span>
+				</a>
+
+				<div class="row">
+					<div class="col-md-5">
+						<p class="input-grp" style="margin-bottom: 8px;">
+							<select class="construct-selector" style="width: 100%; text-indent: 10px; float: right; height: 29.5px;">
+								<option value="default">Construction</option>
+								<option value="age">Age</option>
+								<option value="ceiling">Ceiling</option>
+								<option value="walls">Walls</option>
+								<option value="floors">Floors</option>
+								<option value="structure">Structure</option>
+								<option value="roof">Roof</option>
+							</select>
+						</p>
+					</div>
+					<div class="col-md-5">
+						<p class="input-grp" style="margin-bottom: 8px;">
+							<input type="text" class="property" data-name="" style="width: 100%; text-indent: 10px; height: 29.5px;" disabled="">
+						</p>
+					</div>
+
+					<div class="col-md-2">
+						<p class="input-grp" style="margin-bottom: 8px;">
+							<button type="button" class="construct-plus icon-alone" 
+								style="width: 100%; height: 29.5px; border: none; background: #55acf9; color: #FFFFFF; cursor: not-allowed;" disabled="">
+								<span aria-hidden="true" class="icon-plus"></span>
+								<span class="screen-reader-text">Add Construct</span>
+							</button>
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="miscellaneous-wrapper" 
+				style="padding: 10px; margin-bottom: 10px; background: #fff; overflow: hidden; transition: height 0.3s ease-in-out; height: 86px; border: 1px solid #a9a9a9;">
+				<a href="#" class="controller ctrl-miscellaneous" 
+					style="text-transform: uppercase; text-decoration: none; display: block; font-size: 12pt; color: #5a5a5a; padding-bottom: 10px;">
+					<span class="icon-alone" style="float: right; font-size: 24px;">
+						<span aria-hidden="true" class="icon-chevron-up"></span>
+					</span> 
+					<span class="title">Miscellaneous</span>
+				</a>
+
+				<div class="row">
+					<div class="col-md-5">
+						<p class="input-grp" style="margin-bottom: 8px;">
+							<select class="miscellaneous-selector" style="width: 100%; text-indent: 10px; float: right; height: 29.5px;">
+								<option value="default">Miscellaneous</option>
+								<option value="ac">AC</option>
+								<option value="security">Security</option>
+								<option value="pool">Pool</option>
+								<option value="w_tanks">W/Tank</option>
+								<option value="w_heater">W/Heater</option>
+								<option value="generator">Generator</option>
+								<option value="elevator">Elevator</option>
+								<option value="partition">Partition</option>
+								<option value="fence">Fence</option>
+							</select>
+						</p>
+					</div>
+					<div class="col-md-5">
+						<p class="input-grp" style="margin-bottom: 8px;">
+							<input type="text" class="property" data-name="" style="width: 100%; text-indent: 10px; height: 29.5px;" disabled="">
+						</p>
+					</div>
+
+					<div class="col-md-2">
+						<p class="input-grp" style="margin-bottom: 8px;">
+							<button type="button" class="miscellaneous-plus icon-alone" 
+								style="width: 100%; height: 29.5px; border: none; background: #55acf9; color: #FFFFFF; cursor: not-allowed;" disabled="">
+								<span aria-hidden="true" class="icon-plus"></span>
+								<span class="screen-reader-text">Add Miscellaneous</span>
+							</button>
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="details-wrapper" 
+				style="padding: 10px; margin-bottom: 10px; background: #fff; overflow: hidden; transition: height 0.3s ease-in-out; height: 86px; border: 1px solid #a9a9a9;">
+				<a href="#" class="controller ctrl-details" 
+					style="text-transform: uppercase; text-decoration: none; display: block; font-size: 12pt; color: #5a5a5a; padding-bottom: 10px;">
+					<span class="icon-alone" style="float: right; font-size: 24px;">
+						<span aria-hidden="true" class="icon-chevron-up"></span>
+					</span> 
+					<span class="title">Details</span>
+				</a>
+
+				<div class="row">
+					<div class="col-md-5">
+						<p class="input-grp" style="margin-bottom: 8px;">
+							<select class="details-selector" style="width: 100%; text-indent: 10px; float: right; height: 29.5px;">
+								<option value="default">Details</option>
+								<option value="tenure">Tenure</option>
+								<option value="years">Years</option>
+								<option value="ren_opt">Ren. Opt</option>
+								<option value="rent">Rent</option>
+								<option value="topo">Topo</option>
+							</select>
+						</p>
+					</div>
+					<div class="col-md-5">
+						<p class="input-grp" style="margin-bottom: 8px;">
+							<input type="text" class="property" data-name="" style="width: 100%; text-indent: 10px; height: 29.5px;" disabled="">
+						</p>
+					</div>
+
+					<div class="col-md-2">
+						<p class="input-grp" style="margin-bottom: 8px;">
+							<button type="button" class="details-plus icon-alone" 
+								style="width: 100%; height: 29.5px; border: none; background: #55acf9; color: #FFFFFF; cursor: not-allowed;" disabled="">
+								<span aria-hidden="true" class="icon-plus"></span>
+								<span class="screen-reader-text">Add Details</span>
+							</button>
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="tax-wrapper" 
+				style="padding: 10px; margin-bottom: 10px; background: #fff; overflow: hidden; transition: height 0.3s ease-in-out; height: 86px; border: 1px solid #a9a9a9;">
+				<a href="#" class="controller ctrl-tax" 
+					style="text-transform: uppercase; text-decoration: none; display: block; font-size: 12pt; color: #5a5a5a; padding-bottom: 10px;">
+					<span class="icon-alone" style="float: right; font-size: 24px;">
+						<span aria-hidden="true" class="icon-chevron-up"></span>
+					</span> 
+					<span class="title">Taxes</span>
+				</a>
+
+				<div class="row">
+					<div class="col-md-5">
+						<p class="input-grp" style="margin-bottom: 8px;">
+							<select class="tax-selector" style="width: 100%; text-indent: 10px; float: right; height: 29.5px;">
+								<option value="default">Taxes</option>
+								<option value="taxes">Taxes</option>
+								<option value="wasa">WASA</option>
+								<option value="maintenance">Maintenance</option>
+								<option value="insurance">Insurance</option>
+								<option value="comp_cert">Comp. Cert.</option>
+							</select>
+						</p>
+					</div>
+					<div class="col-md-5">
+						<p class="input-grp" style="margin-bottom: 8px;">
+							<input type="text" class="property" data-name="" style="width: 100%; text-indent: 10px; height: 29.5px;" disabled="">
+						</p>
+					</div>
+
+					<div class="col-md-2">
+						<p class="input-grp" style="margin-bottom: 8px;">
+							<button type="button" class="tax-plus icon-alone" 
+								style="width: 100%; height: 29.5px; border: none; background: #55acf9; color: #FFFFFF; cursor: not-allowed;" disabled="">
+								<span aria-hidden="true" class="icon-plus"></span>
+								<span class="screen-reader-text">Add Taxes</span>
+							</button>
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="owner-wrapper" 
+				style="padding: 10px; margin-bottom: 80px; background: #fff; overflow: hidden; transition: height 0.3s ease-in-out; height: 500px; border: 1px solid #a9a9a9;">
+				<a href="#" class="controller ctrl-owner" 
+					style="text-transform: uppercase; text-decoration: none; display: block; font-size: 12pt; color: #5a5a5a; padding-bottom: 10px;">
+					<span class="icon-alone" style="float: right; font-size: 24px;">
+						<span aria-hidden="true" class="icon-chevron-up"></span>
+					</span> 
+					<span class="title">Owner</span>
+				</a>
+
+				<div class="row">
+					<div class="col-md-12">
+						<p class="input-grp" style="margin-bottom: 8px;">
+							<label for="existing-owners" style="width: 100%;">
+								Existing Owners
+								<a href="#" class="update-owner hide" style="float: right; text-decoration: none;">Update Owner Details</a>
+							</label>
+							<select class="property select-owner owner_id" data-name="owner_id" style="width: 100%; text-indent: 10px; height: 29.5px;">
+								<option value="default">--</option>
+							</select>
+						</p>
+
+						<script>
+							$.get('/owners').done(function (data) {
+								$.each(data, function (i, field) {
+									var option = $('<option>', {'value': field.id, 'text': field.name });
+									$('.select-owner').append(option);
+								});
+							});
+
+							$(document).on('change', '.select-owner', function () {
+								$.get('/owners/' + $(this).val()).done(function (data) {
+									$.each($('.owner'), function (i, field) {
+										var attr = $(field).attr('data-attr-name');
+										$(field).val(data[attr]);
+									});
+								});
+
+								if ($(this).val() !== 'default') {
+									$('input.owner_id').val($(this).val());
+									$('.owner').prop('disabled', true);
+									$('.update-owner').removeClass('hide');
+								} else {
+									$('input.owner_id').val('-9999');
+									$('.owner').prop('disabled', false);
+									$('.update-owner').addClass('hide');
+								}
+								
+							});
+
+							$(document).on('click', '.update-owner', function (e) {
+								e.preventDefault();
+								$('.owner').prop('disabled', false);
+							});
+						</script>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<p class="input-grp" style="margin-bottom: 8px;">
+							<input type="text" class="owner" placeholder="Owner Name" data-attr-name="name" style="width: 100%; text-indent: 10px; height: 29.5px;">
+						</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<p class="input-grp" style="margin-bottom: 8px;">
+							<input type="text" class="owner" placeholder="Address" data-attr-name="address" style="width: 100%; text-indent: 10px; height: 29.5px;">
+						</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<p class="input-grp" style="margin-bottom: 8px;">
+							<input type="text" class="owner" placeholder="Organisation" data-attr-name="organisation" 
+								style="width: 100%; text-indent: 10px; height: 29.5px;">
+						</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<p class="input-grp" style="margin-bottom: 8px;">
+							<input type="text" class="owner" placeholder="Email" data-attr-name="email" style="width: 100%; text-indent: 10px; height: 29.5px;">
+						</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-4">
+						<p class="input-grp" style="margin-bottom: 8px;">
+							<input type="text" class="owner" placeholder="Primary Phone" data-attr-name="primary_phone" 
+								style="width: 100%; text-indent: 10px; height: 29.5px;">
+						</p>
+					</div>
+
+					<div class="col-md-4">
+						<p class="input-grp" style="margin-bottom: 8px;">
+							<input type="text" class="owner" placeholder="Secondary Phone" data-attr-name="secondary_phone" 
+								style="width: 100%; text-indent: 10px; height: 29.5px;">
+						</p>
+					</div>
+
+					<div class="col-md-4">
+						<p class="input-grp" style="margin-bottom: 8px;">
+							<input type="text" class="owner" placeholder="Fax" data-attr-name="fax" 
+								style="width: 100%; text-indent: 10px; height: 29.5px;">
+						</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<p class="input-grp" style="margin-bottom: 8px;">
+							<input type="text" class="owner" placeholder="Contact" data-attr-name="contact" style="width: 100%; text-indent: 10px; height: 29.5px;">
+						</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-4">
+						<p class="input-grp" style="margin-bottom: 8px;">
+							<input type="text" class="owner" placeholder="Contact Phone" data-attr-name="contact_phone" 
+								style="width: 100%; text-indent: 10px; height: 29.5px;">
+						</p>
+					</div>
+
+					<div class="col-md-4">
+						<p class="input-grp" style="margin-bottom: 8px;">
+							<input type="text" class="owner" placeholder="Contact Email" data-attr-name="contact_email" 
+								style="width: 100%; text-indent: 10px; height: 29.5px;">
+						</p>
+					</div>
+
+					<div class="col-md-4">
+						<p class="input-grp" style="margin-bottom: 8px;">
+							<input type="text" class="owner" placeholder="Contact Fax" data-attr-name="contact_fax" 
+								style="width: 100%; text-indent: 10px; height: 29.5px;">
+						</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<p class="input-grp" style="margin-bottom: 8px;">
+							<label for="note" style="margin-bottom: 4px; font-size: 12px; text-transform: uppercase; line-height: 28px;">Note</label>
+							<textarea class="owner" data-attr-name="note" placeholder="Note" 
+								style="width: 100%; text-indent: 10px; height: 80px;"></textarea>
+						</p>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+</div>
+
+
+<div id="photo-upload-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Modal Header</h4>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the modal.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

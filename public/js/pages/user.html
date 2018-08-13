@@ -1,0 +1,162 @@
+<div class="saving-overlay hide">
+	<div class="background"></div>
+	<div class="content">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-2 offset-md-5">
+					<div class="image-container">
+						<img src="./img/save.gif"/>
+						<p style="text-align: center;">Saving...</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<button type="button" class="save-user icon-alone">
+	<span aria-hidden="true" class="icon-save"></span>
+	<span class="screen-reader-text">Save</span>
+</button>
+
+<button type="button" class="add icon-alone">
+	<span aria-hidden="true" class="icon-add"></span>
+	<span class="screen-reader-text">New</span>
+</button>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="property-entry print-margin">
+				<div class="row user-wrapper">
+					<div class="col-md-12">
+						<div class="message-wrapper">
+							<div class="message-success">
+								<p class="create hide">Successfully created new user!</p>
+								<p class="update hide">Successfully updated user information!</p>
+							</div>
+							<div class="message-error">
+								<p class="create hide">Error creating new user :(</p>
+								<p class="update hide">Error updating user information :(</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-3">
+					<div class="item">
+						<label>User Type</label>
+						<select class="user usertype_id required" data-attr-name="usertype_id">
+							<option value="default">--</option>
+							<option value="2">Admin</option>
+							<option value="3">Agent</option>
+						</select>
+					</div>
+					</div>
+
+					<div class="col-md-9"></div>
+
+					<div class="col-md-12">
+						<div class="item">
+							<label>
+								Existing Users
+								<a href="#" class="update-user hide" style="float: right; text-decoration: none;">Update User</a>
+							</label>
+							<select class="select-agent agent_id" data-name="agent_id">
+								<option value="default">--</option>
+							</select>
+							<script>
+								$.get('/user/agents').done(function (data) {
+									$.each(data, function (i, field) {
+										var option = $('<option>', {'value': field.id, 'text': field.first_name + ' ' + field.last_name });
+										$('.select-agent').append(option);
+									});
+								});
+
+								$(document).on('change', '.select-agent', function () {
+									$.get('/user/' + $(this).val()).done(function (data) {
+										$.each($('.user'), function (i, field) {
+											var attr = $(field).attr('data-attr-name');
+											$(field).val(data[attr]);
+										});
+									});
+
+									if ($(this).val() !== 'default') {
+										$('.user').prop('disabled', true);
+										$('.update-user').removeClass('hide');
+									} else {
+										$('.id').val('-9999');
+										$('.usertype_id').val('default');
+										$('.user').prop('disabled', false);
+										$('.update-user').addClass('hide');
+									}
+
+									$('.empty').removeClass('empty');
+									
+								});
+
+								$(document).on('click', '.update-user', function (e) {
+									e.preventDefault();
+									$('.user').prop('disabled', false);
+								});
+							</script>
+						</div>
+					</div>
+
+					<div class="col-md-6">
+					<div class="item">
+						<label>First Name</label>
+						<input type="text" class="user first_name required" data-attr-name="first_name" value=""/>
+						<input type="text" class="user id" data-attr-name="id" value="-9999" hidden disabled="" />
+					</div>
+					</div>
+
+					<div class="col-md-6">
+					<div class="item">
+						<label>Last Name</label>
+						<input type="text" class="user last_name" data-attr-name="last_name" value=""/>
+					</div>
+					</div>
+					<div class="col-md-6">
+					<div class="item">
+						<label>Email</label>
+						<input type="text" class="user email required" data-attr-name="email" value=""/>
+						<input type="text" class="user username" data-attr-name="username" value="none" hidden/>
+					</div>
+					</div>
+					<div class="col-md-6">
+					<div class="item">
+						<label>Work Phone</label>
+						<input type="text" class="user work_phone" data-attr-name="work_phone" value=""/>
+					</div>
+					</div>
+					<div class="col-md-6">
+					<div class="item">
+						<label>Office Phone</label>
+						<input type="text" class="user office_phone" data-attr-name="office_phone" value=""/>
+					</div>
+					</div>
+					<div class="col-md-6">
+					<div class="item">
+						<label>Mobile Phone</label>
+						<input type="text" class="user mobile_phone" data-attr-name="mobile_phone" value=""/>
+					</div>
+					</div>
+
+					<div class="col-md-6">
+					<div class="item">
+						<label>Password</label>
+						<input type="text" class="user password required" data-attr-name="password" value=""/>
+					</div>
+					</div>
+					<div class="col-md-6">
+					<div class="item">
+						<label>Retype Password</label>
+						<input type="text" class="user retype required" data-attr-name="retype" value=""/>
+					</div>
+					</div>	
+				</div>
+			</div>
+			<span class="spacer"></span>
+		</div>
+	</div>
+</div>
